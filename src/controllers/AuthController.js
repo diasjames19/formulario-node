@@ -4,7 +4,8 @@ import bcrypt from 'bcrypt';
 
 
 
-class UserController{
+
+class AuthController{
     async storeSignUp(req, res){
 
         const schema = Yup.object().shape({
@@ -36,8 +37,9 @@ class UserController{
                     return res.json(user);
         }
        
+        //const password = await bcrypt.hash(data.pass,10);
         
     }
 }
 
-export default new UserController();
+export default new AuthController();
